@@ -1,4 +1,112 @@
 <html>
+  <title>Paper Bridges NC>
+body {
+   background: white-grey;
+}
+
+.letters-container {
+    background-color: #004466;
+  }
+  .footer {
+    background-color:#fadadd;
+}
+.google_input {
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  outline: 0;
+  border: 1px solid #F1F3F4;
+  background: #F1F3F4;
+  transition: all 200ms;
+  width: 60%;
+  margin: 0.5rem 0.5rem;
+  margin-left: 0;
+  z-index: -1;
+}
+.google_input:focus {
+  background: #FFF;
+  box-shadow: 1px 3px 5px 1px #e1e1e1;
+  border-color: #F1F3F4;
+}
+.group {
+  display: block;
+}
+label {
+  width: fit-content;
+  margin: 0.5rem;
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: -3px;
+  margin-left: 16px;
+  font-family: Sans-Serif;
+  font-weight: 300;
+  z-index: 1;
+}
+label:hover {
+  cursor: pointer;
+}
+.formBtn {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  background: #F1F3F4;
+  border: 1px solid #F1F3F4;
+  color: #000;
+  margin: 1rem;
+  margin-left: 0;
+  transition: all 200ms;
+}
+.formBtn:hover {
+  cursor: pointer;
+  background: #abf2b0;
+  color: #000;
+  border-color: #abf2b0;
+  box-shadow: 1px 2px 5px 0px #e1e1e1;
+}
+.formBtn:focus {
+  outline: none;
+  background: #6add8f;
+  border: 1px solid #6add8f;
+}
+.iframe-container {
+  overflow: hidden;
+  // Calculated from the aspect ration of the content (in case of 16:9 it is 9/16= 0.5625)
+  padding-top: 56.25%;
+  position: relative;
+}
+ 
+.iframe iframe {
+   border: 0;
+   height: 100%;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 100%;
+}
+  .header-logo {
+  align-self: center;
+  margin-left: 2rem;
+}
+#logo {
+  transition: all 0.5s ease-out;
+}
+
+#logo:hover {
+  transform: perspective(400px) translate3d(-10px, 0px, -10px) scale(0.93);
+}
+.header-letter {
+  font-size: 30px;
+  color: #6a4a39;
+</style>
+</title>
+
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+  height: 100%;
+  color: #7;
+  line-height: 1.5;
+  size: 50px;
+}
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -74,9 +182,34 @@ img {vertical-align: middle;}
 </style>
 </head>
 <body>
+ <!--Logo Airplane -->
+  <div class="header-logo">
+            <svg id="logo" width="150" height="42" viewBox="0 0 41 22" fill="	#FFC0CB">
+                <path d="M33.7857 18.6786C33.739 18.6552 33.6903 18.6252 33.6399 18.5889C31.7025 17.4062 27.6816 15.275 25.9746 15.5536C24.9235 17.4362 23.9189 19.5535 23.2857 21C18.4456 18.9651 7.21239 12.1163 1 1L39.268 6.25659C39.5365 6.25356 39.7837 6.28434 40 6.35714L39.268 6.25659C37.6925 6.27436 35.3842 7.45629 34.2857 8.14286C35.2571 10.2857 34.3571 16.0595 33.7857 18.6786Z" fill="#e0ffff" />
+                <path d="M1 1L40 6.35714C38.5143 5.85714 35.5714 7.33929 34.2857 8.14286M1 1L29.3571 11.3571M1 1L34.2857 8.14286M1 1C7.21239 12.1163 18.4456 18.9651 23.2857 21C23.9189 19.5535 24.9235 17.4362 25.9746 15.5536M29.3571 11.3571C30.3571 13.5595 32.6429 18.1071 33.7857 18.6786M29.3571 11.3571C28.5217 11.4345 27.2158 13.3304 25.9746 15.5536M33.7857 18.6786C34.3571 16.0595 35.2571 10.2857 34.2857 8.14286M33.7857 18.6786C31.9116 17.5179 27.7257 15.2679 25.9746 15.5536" stroke="#FF8989"></svg>
+  <!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"/></i>
+    </a>
+    <a href="paperbridges.github." class="w3-bar-item w3-button">HOME</a>
+ 
+    
+   </div>
+</div>
+    </a>
+  </div></right>
 
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="paperbridges.github.io" class="w3-bar-item w3-button" onclick="toggleFunction()">HOME</a>
 
-<div class="slideshow-container">
+    
+  </div>
+</div>
+
+<center><div class="slideshow-container">
 
 <div class="mySlides fade">
   <div class="numbertext">1 / 10</div>
@@ -163,6 +296,6 @@ function showSlides() {
 }
 </script>
 
-</body></head>
+</body></head></center>
 </html> 
 <br>
